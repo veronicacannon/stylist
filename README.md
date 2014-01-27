@@ -22,5 +22,7 @@ Export csv of customer contact info collected
 Edit list of services on customer page
 Edit message of the day
 
+<a href="http://www.slideshare.net/veronicacannon/stylist-30508817" alt="Deck of TO DO">Deck of TO DOs</a>
+
 The Reno Tahoe Women Who Code Meetup is taking this on as a collaborative project.  Check out our progress on Meetup.
 
