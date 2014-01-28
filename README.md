@@ -24,5 +24,5 @@ Edit message of the day
 
 <a href="http://www.slideshare.net/veronicacannon/stylist-30508817" alt="TO DO list">deck of TO DO cards</a>
 
-The Reno Tahoe Women Who Code Meetup is taking this on as a collaborative project.  Check out our progress on Meetup.
+The <a href="http://www.meetup.com/Reno-Tahoe-Women-Who-Code/">Reno Tahoe Women Who Code Meetup</a> is taking this on as a collaborative project.  Check out our progress on Meetup.
 
