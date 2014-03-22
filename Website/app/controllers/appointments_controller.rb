@@ -12,6 +12,23 @@ class AppointmentsController < ApplicationController
 
   # GET /appointments/1
   # GET /appointments/1.json
+  
+  def export_appointments
+	@appointments = Appointment.find(params[:id])
+	@calendar = Icalendar::Calendar.new
+		event = Icalendar::Event.new
+		event.start = @appointments.appot.strftime("%Y%m%dT%H%M%S")
+		# event.end = @appointments.appot.strftime("%Y%m%dT%H%M%S")
+		event.summary = @appointments.service + " - " +@appointments.last_name
+		event.description = @appointments.message
+		#event.location = “PUT HER ADDRESS HERE”
+	@calendar.add event
+	@calendar.publish
+		headers['Content-Type'] = "text/calendar; charset=UTF-8"
+		render :text => @calendar.to_ical
+		#render_without_layout :text => @calendar.to_ical
+  end
+	
   def show
     @appointment = Appointment.find(params[:id])
 
