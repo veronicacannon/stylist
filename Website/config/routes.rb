@@ -1,5 +1,6 @@
 Website::Application.routes.draw do
   resources :appointments
+  match 'export_appointment/:id' => 'appointments#export_appointments'
 
 
   # The priority is based upon order of creation:
