@@ -1,4 +1,7 @@
 Website::Application.routes.draw do
+  resources :users
+
+
   resources :appointments
   match 'export_appointment/:id' => 'appointments#export_appointments'
 
