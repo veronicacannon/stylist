@@ -11,3 +11,92 @@
  *= require_self
  *= require_tree .
  */
+
+ /* COLORS
+ Green #9fcd39
+ Turquoise #19a99f
+ Light Blue #64c9d1 */
+
+html, body {
+	background: #fff;
+	margin: 0;
+	padding: 0;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 18px;
+}
+
+body {
+	/*width: 960px;
+	margin: 50px auto;*/
+	padding: 50px;
+}
+
+a {
+	outline: none;
+	color: #64c9d1;
+}
+
+img {
+	margin: 0 -50px 0 50px;
+	float: right;
+}
+
+h1 {
+	margin: 0 0 1em;
+	padding: 0;
+	color: #9fcd39;
+	font-size: 48px;
+	font-weight: normal;
+}
+
+table {
+	border: 0;
+	border-spacing: 0;
+	width: 100%;
+	margin: 50px 0;
+	font-size: 16px;
+}
+
+th, td {
+	border: 0;
+	margin: 0;
+	padding: .5em;
+	text-align: left;
+}
+
+th {
+	border-bottom: 1px solid #ccc;
+}
+
+td {
+	border-bottom: 1px dotted #ccc;
+}
+
+td:last-child { text-align: right;}
+
+table a { margin-left: 2em; }
+
+input[type='text'], textarea, select {
+	border: 1px solid #ccc;
+	margin: .5em 0 1em;
+	padding: .3em.5em;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+}
+
+input[type='text']:focus, textarea:focus, select:focus {
+	border-color: #64c9d1;
+	outline: none;
+}
+
+textarea {
+	width: 400px;
+	height: 200px;
+}
+
+input[type='submit'] {
+	margin: 1.5em 0;
+	padding: .3em .6em;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 24px;
+}
