@@ -17,7 +17,7 @@ class Appointment < ActiveRecord::Base
 #phone - field is filled out, 10 numbers required, auto fill numbers for later 
 
   #validates :phone, presence: true
-	validates_format_of :phone, :with =>	/\A\(?(\d{3})[-\)]?\s?(\d{3})[-\s]?(\d{4})\z/
+  validates_format_of :phone, :with =>	/\A\(?(\d{3})[-\)]?\s?(\d{3})[-\s]?(\d{4})\z/
 
 
 
