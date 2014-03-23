@@ -10,13 +10,11 @@ class Appointment < ActiveRecord::Base
 
 # validate Email - field is filled out, and use regex
 
-  #git validates :email, presence: true
   validates :email, :uniqueness => true
   validates_format_of :email, :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i
 
 #phone - field is filled out, 10 numbers required, auto fill numbers for later 
 
-  #validates :phone, presence: true
   validates_format_of :phone, :with =>	/\A\(?(\d{3})[-\)]?\s?(\d{3})[-\s]?(\d{4})\z/
 
 
