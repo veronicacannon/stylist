@@ -1,4 +1,5 @@
 Website::Application.routes.draw do
+  root :to => 'appointments#new'
   resources :users
 
 
