@@ -1,9 +1,12 @@
 Website::Application.routes.draw do
   root :to => 'appointments#new'
+
+  resources :services
+
   resources :users
 
-
   resources :appointments
+
   match 'export_appointment/:id' => 'appointments#export_appointments'
 
 
