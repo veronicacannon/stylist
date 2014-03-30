@@ -1,4 +1,7 @@
 Website::Application.routes.draw do
+  resources :services
+
+
   resources :users
 
 
