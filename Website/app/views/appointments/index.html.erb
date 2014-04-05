@@ -1,35 +1,33 @@
 <h1>Listing appointments</h1>
 
+<%= link_to 'New Appointment', new_appointment_path %>
+
 <table>
   <tr>
-    <th> First name </th>
-    <th> Last name </th>
-    <th> Phone </th>
-    <th> Email </th>
-    <th> Appot </th>
-    <th> Service </th>
-    <th> Message </th>
-    <th>  </th>
-    <th>  </th>
-    <th>  </th>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Phone</th>
+    <th>Email</th>
+    <th>Date/Time</th>
+    <th>Service</th>
+    <th>Message</th>
+    <th></th>
   </tr>
 
 <% @appointments.each do |appointment| %>
   <tr>
-    <td> <%= appointment.first_name %> </td>
-    <td> <%= appointment.last_name %> </td>
-    <td> <%= appointment.phone %> </td>
-    <td> <%= appointment.email %> </td>
-    <td> <%= appointment.appot %> </td>
-    <td> <%= appointment.service %> </td>
-    <td> <%= appointment.message %> </td>
-    <td> <%= link_to 'Show', appointment %> </td>
-    <td> <%= link_to 'Edit', edit_appointment_path(appointment) %> </td>
-    <td> <%= link_to 'Destroy', appointment, method: :delete, data: { confirm: 'Are you sure?' } %> </td>
+    <td><%= appointment.first_name %></td>
+    <td><%= appointment.last_name %></td>
+    <td><%= appointment.phone %></td>
+    <td><%= appointment.email %></td>
+    <td><%= appointment.appot %></td>
+    <td><%= appointment.service %></td>
+    <td><%= appointment.message %></td>
+    <td>
+        <%= link_to 'Show', appointment %>
+        <%= link_to 'Edit', edit_appointment_path(appointment) %>
+        <%= link_to 'Destroy', appointment, method: :delete, data: { confirm: 'Are you sure?' } %>
+    </td>
   </tr>
 <% end %>
 </table>
-
-<br />
-
-<%= link_to 'New Appointment', new_appointment_path %>
