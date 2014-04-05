@@ -1,0 +1,12 @@
+after git pull and rake db:migrate
+follow these instructions to create your admin user
+
+cd to the directory stylist/website
+
+type rails console
+
+then within the console type:
+
+p - User.create full_name: "Admin user", password: "minnie", username: "admin"
+
+type exit to quit out of the rails console
