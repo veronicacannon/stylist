@@ -18,8 +18,8 @@ class AppointmentsMailer < ActionMailer::Base
     event = Event.new
     event.start = @appmnt.date
     event.summary = 'Name: ' + @appmnt.firstname + ' ' + @appmnt.lastname '\n'\
-                    'Service: ' + @appmnt.service + '\n'\
                     'Date: ' + @appmnt.date + '\n'\
+                    'Service: ' + @appmnt.service + '\n'\
                     'Email: ' + @appment.email
     return event
   end
