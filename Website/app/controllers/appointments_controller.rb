@@ -2,7 +2,7 @@ class AppointmentsController < ApplicationController
   # GET /appointments
   # GET /appointments.json
   def index
-    @appointments = Appointment.all
+    @appointments = Appointment.find(:all, :order=>'appot')
 
     respond_to do |format|
       format.html # index.html.erb
@@ -61,7 +61,7 @@ class AppointmentsController < ApplicationController
 
     respond_to do |format|
       if @appointment.save
-        format.html { redirect_to @appointment, notice: 'Appointment was successfully created.' }
+        format.html { redirect_to thanks_url, notice: 'Appointment was successfully created.' }
         format.json { render json: @appointment, status: :created, location: @appointment }
       else
         format.html { render action: "new" }
@@ -69,6 +69,16 @@ class AppointmentsController < ApplicationController
       end
     end
   end
+
+  #below was if we want to thanks page to list the appointment
+  #def thanks
+  #  @appointments = Appointment.find(:all, :order=>'appot')
+
+  #  respond_to do |format|
+  #    format.html # index.html.erb
+  #    format.json { render json: @appointments }
+  #  end
+  #end
 
   # PUT /appointments/1
   # PUT /appointments/1.json
