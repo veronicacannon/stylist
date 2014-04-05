@@ -1,6 +1,8 @@
 Website::Application.routes.draw do
   root :to => 'appointments#new'
 
+  match '/thanks' => 'pages#thanks'
+
   resources :services
 
   resources :users
