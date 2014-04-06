@@ -9,6 +9,8 @@ Website::Application.routes.draw do
 
   match 'export_appointment/:id' => 'appointments#export_appointments'
 
+  match '/admin' => 'appointments#index'
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
