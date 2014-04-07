@@ -1,5 +1,6 @@
 class Appointment < ActiveRecord::Base
-  attr_accessible :appot, :email, :first_name, :last_name, :message, :phone, :service
+  attr_accessible :appot, :email, :first_name, :last_name, :message, :phone, :service_id
+  belongs_to :service
 
 # validate First Name - field is filled out, and more than one character less than 15
   validates :first_name, presence: true

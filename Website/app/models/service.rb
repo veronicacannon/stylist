@@ -1,5 +1,6 @@
 class Service < ActiveRecord::Base
   attr_accessible :service_description, :service_time_estimate
+  has_many :appointments
 
   #validates service time is no greater than 3 hours
 

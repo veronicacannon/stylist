@@ -32,8 +32,8 @@
     <%= f.datetime_select :appot %>
   </div>
   <div class="field">
-    <%= f.label :service %><br />
-    <%= f.text_area :service %>
+    <%= f.label :service_id %><br />
+    <%= f.collection_select :service_id, Service.all, :id, :service_description %>
   </div>
   <div class="field">
     <%= f.label :message %><br />
