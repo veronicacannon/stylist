@@ -1,0 +1,130 @@
+@import "bootstrap";
+
+/*  Color Storage: */
+/* color: 33CCFF */ /* light blue */
+/* color: 99CC00 */ /* light green */
+/* color: 3399CC */ /* medium blue */
+/* swirlbackground */ /* background: #3399CC url("../images/arches.png") repeat; */
+/* */
+
+
+/* universal */
+
+html {
+  overflow-y: scroll;
+}
+
+.header-strip {
+  background: #fff asset-url('Alysia_strip.jpg', image) no-repeat center;
+}
+
+body {
+  padding-top: 60px;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: center;
+}
+
+.center h1 {
+  margin-bottom: 10px;
+}
+
+/* typography */
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+}
+
+h1 {
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.2em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: #999;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.7em;
+}
+
+table {
+  border-radius: 2px;
+  margin: 10px;
+  width: 90%;
+}
+
+div {
+  padding: 10px;
+  /*background-color: #29544d;*/
+  background-repeat: asset-url('diagonal_waves_db.png', image);
+  border-radius: 5px;
+}
+
+/* header */
+
+.backed {
+  background: #283142 asset-url('diagonal_waves.png', image) repeat;
+  border-radius: 6px;
+}
+
+#logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+  line-height: 1;
+}
+
+#logo:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Logo Image Split */
+/*The following dont actually work yet*/
+/*#leftHalf {
+   background: url(images/Alysia_Logo_0126v0936.jpg);
+   width: 100%;
+   position: absolute;
+   left: 0px;
+   height: 100%;
+}
+#rightHalf {
+   background: url(images/Alysia_Logo_0126v0936.jpg);
+   width: 50%;
+   position: absolute;
+   right: 0px;
+   height: 100%;
+}*/
+
+body {
+  margin: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  color: #33CCFF;
+  background-color: #99cc00;
+  background: #33ccff  asset-url('arches.png', image) repeat;
+}
