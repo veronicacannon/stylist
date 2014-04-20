@@ -1,9 +1,10 @@
 @import "bootstrap";
 
 /*  Color Storage: */
-/* color: 33CCFF */ /* light blue */
-/* color: 99CC00 */ /* light green */
-/* color: 3399CC */ /* medium blue */
+/* color: 33CCFF; */ /* light blue */
+/* color: 99CC00; */ /* light green */
+/* color: 3399CC; */ /* medium blue */
+/*  color: #29544d;  darker blue (male face shade)*/
 /* swirlbackground */ /* background: #3399CC url("../images/arches.png") repeat; */
 /* */
 
@@ -12,10 +13,12 @@
 
 html {
   overflow-y: scroll;
+  background-image: asset-url('arches.png', image);
+  background-repeat: repeat;
 }
 
 .header-strip {
-  background: #fff asset-url('Alysia_strip.jpg', image) no-repeat center;
+  background: transparent asset-url('Alysia_strip.jpg', image) no-repeat center;
 }
 
 body {
@@ -74,6 +77,7 @@ table {
 div {
   padding: 10px;
   /*background-color: #29544d;*/
+  background-color: transparent;
   background-repeat: asset-url('diagonal_waves_db.png', image);
   border-radius: 5px;
 }
@@ -125,6 +129,9 @@ body {
   font-size: 14px;
   line-height: 20px;
   color: #33CCFF;
-  background-color: #99cc00;
-  background: #33ccff  asset-url('arches.png', image) repeat;
+  background-color: #fff;
+  /*background: #33ccff  asset-url('arches.png', image) repeat;*/
+  background-image: asset-url('alysia_logo.png', image), asset-url('arches.png', image);
+  background-repeat: no-repeat, repeat;
+  background-position: right, center;
 }
