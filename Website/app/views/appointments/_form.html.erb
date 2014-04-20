@@ -29,7 +29,7 @@
   </div>
   <div class="field">
     <%= f.label :appot %><br />
-    <%= f.datetime_select :appot %>
+    <%= f.datetime_select :appot, :minute_step => 15 %>
   </div>
   <div class="field">
     <%= f.label :service_id %><br />
