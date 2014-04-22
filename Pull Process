@@ -1,0 +1,9 @@
+type git pull
+
+type rake db:reset
+
+type rake db:seed
+
+type rails server
+
+go to browser and type localhost:3000/admin and use username admin and password password (clearly for testing purposes)
