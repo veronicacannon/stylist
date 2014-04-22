@@ -28,8 +28,8 @@
     <%= f.text_field :email %>
   </div>
   <div class="field">
-    <%= f.label :appot %><br />
-    <%= f.datetime_select :appot %>
+    <p>Select Date and Time For Your Appointment</p>
+    <%= f.datetime_select :appot, :minute_step => 10 %>
   </div>
   <div class="field">
     <%= f.label :service_id %><br />
