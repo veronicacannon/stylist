@@ -29,7 +29,7 @@
   </div>
   <div class="field">
     <p>Select Date and Time For Your Appointment</p>
-    <%= f.datetime_select :appot, :minute_step => 10 %>
+    <%= f.datetime_select :appot, :minute_step => 10, ampm: true %>
   </div>
   <div class="field">
     <%= f.label :service_id %><br />
