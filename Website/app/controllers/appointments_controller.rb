@@ -61,6 +61,7 @@ class AppointmentsController < ApplicationController
 
     respond_to do |format|
       if @appointment.save
+        AppointmentMailer.appointment_email(@appointment).deliver
         format.html { redirect_to thanks_url, notice: 'Appointment was successfully created.' }
         format.json { render json: @appointment, status: :created, location: @appointment }
       else
