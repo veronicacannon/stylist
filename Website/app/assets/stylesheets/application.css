@@ -44,7 +44,8 @@ img {
 h1 {
 	margin: 0 0 1em;
 	padding: 0;
-	color: #9fcd39;
+	/*color: #9fcd39;*/
+        font-color: #29544d;
 	font-size: 48px;
 	font-weight: normal;
 }
