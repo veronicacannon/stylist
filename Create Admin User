@@ -7,6 +7,6 @@ type rails console
 
 then within the console type:
 
-p - User.create full_name: "Admin user", password: "minnie", username: "admin"
+p = User.create full_name: "Admin user", password: "minnie", username: "admin"
 
 type exit to quit out of the rails console
