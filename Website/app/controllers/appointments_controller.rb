@@ -61,7 +61,7 @@ class AppointmentsController < ApplicationController
 
     respond_to do |format|
       if @appointment.save
-        format.html { redirect_to thanks_url, notice: 'Appointment was successfully created.' }
+        format.html { redirect_to url_thanks, notice: 'Appointment was successfully created.' }
         format.json { render json: @appointment, status: :created, location: @appointment }
       else
         format.html { render action: "new" }
@@ -75,7 +75,7 @@ class AppointmentsController < ApplicationController
   #  @appointments = Appointment.find(:all, :order=>'appot')
 
   #  respond_to do |format|
-  #    format.html # index.html.erb
+  #    format.html # thanks.html.erb
   #    format.json { render json: @appointments }
   #  end
   #end
