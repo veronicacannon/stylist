@@ -76,7 +76,7 @@ class AppointmentsController < ApplicationController
   #  @appointments = Appointment.find(:all, :order=>'appot')
 
   #  respond_to do |format|
-  #    format.html # index.html.erb
+  #    format.html # thanks.html.erb
   #    format.json { render json: @appointments }
   #  end
   #end
