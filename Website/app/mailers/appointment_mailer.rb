@@ -1,7 +1,7 @@
 class AppointmentMailer < ActionMailer::Base
 
-  default from: Application.config.from_email_address,
-          subject: "Hair Appointment with #{Application.config.stylist_name}",
+  default from: Website::Application.config.stylist.from_email_address,
+          subject: "Hair Appointment with #{Website::Application.config.stylist.name}"
   
   def new_appointment_to_stylist(appointment)
     @appointment = appointment
@@ -10,7 +10,7 @@ class AppointmentMailer < ActionMailer::Base
       attachments['appointment.ics'] = ics.read
     end
 
-    mail(to: Application.config.stylist_email_address)
+    mail(to: Website::Application.config.stylist.email_address)
   end
   
   def new_appointment_to_client(appointment)
@@ -23,7 +23,7 @@ class AppointmentMailer < ActionMailer::Base
 
   def create_ics
     Icalendar::Event.new.tap do |event|
-      event.start   = @appointment.appot
+      event.dtstart   = @appointment.appot
       event.summary = summary
     end
   end

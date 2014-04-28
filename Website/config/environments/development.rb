@@ -34,6 +34,10 @@ Website::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+  
+  config.stylist.name = "Stylist"
+  config.stylist.from_email_address = "no-reply@example.com"
+  config.stylist.email_address = "stylist@example.com"
 
   # ActionMailer Configuration
   #config.action_mailer.default_url_options = { host: 'localhost:3000' }
