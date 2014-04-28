@@ -22,9 +22,11 @@ class AppointmentMailer < ActionMailer::Base
   private
 
   def create_ics
-    Icalendar::Event.new.tap do |event|
-      event.dtstart   = @appointment.appot
-      event.summary = summary
+    Icalendar::Calendar.new.tap do |cal|
+      cal.event do |event|
+        event.dtstart = @appointment.appot
+        event.summary = summary
+      end
     end
   end
 
