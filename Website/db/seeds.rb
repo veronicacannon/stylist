@@ -7,3 +7,4 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 User.create(full_name: 'Admin user', username: 'admin', password: 'password')
+Service.create(service_description: 'hair', service_time_estimate: '40')
