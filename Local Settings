@@ -1,0 +1,8 @@
+The app has been updated to use a YAML file for some of the app config. To use your own stylist configs and mail/smtp setting, do the following:
+
+Copy config/default_stylist.yml to config/stylist.yml (e.g. cp config/default_stylist.yml config/stylist.yml).
+Update it with any local information such as names and passwords.
+To use smtp in development, set development:
+									mail:
+										delivery_method: to :smtp
+Do not track stylist.yml in git (.gitignore has been updated to support this).

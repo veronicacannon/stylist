@@ -1,0 +1,33 @@
+shared: &shared
+    info:
+        name:               "Stylist"
+        email_address:      "stylist@example.com"
+        from_email_address: "no-reply@example.com"
+    smtp:
+        address:              "mail.example.com"
+        port:                 587
+        user_name:            "username@example.com"
+        password:             "super-secret"
+        authentication:       "login"
+        enable_starttls_auto: true
+
+production:
+    <<: *shared
+    mail:
+        raise_delivery_errors: false
+        perform_deliveries: true
+        delivery_method: :smtp
+
+development:
+    <<: *shared
+    mail:
+        raise_delivery_errors: true
+        perform_deliveries: true
+        delivery_method: :letter_opener
+
+test:
+    <<: *shared
+    mail:
+        raise_delivery_errors: true
+        perform_deliveries: true
+        delivery_method: :letter_opener
