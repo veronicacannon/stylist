@@ -35,21 +35,9 @@ Website::Application.configure do
   # Expands the lines which load the assets
   config.assets.debug = true
   
-  config.stylist_name = "Alicia"
-  config.from_email_address = "haircut@ltol.com"
-  config.stylist_email_address = "me@veronicacannon.com"
-
   # ActionMailer Configuration
-  #config.action_mailer.default_url_options = { host: 'localhost:3000' }
   config.action_mailer.raise_delivery_errors = true
-  config.action_mailer.perform_deliveries = 
-  # Change :letter_opener to :smtp>
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = {
-  address:              'mail.ltol.com',
-  port:                 587,
-  user_name:            'haircut@ltol.com',
-  password:             'Stylist14',
-  authentication:       'login',
-  enable_starttls_auto: false  }
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.delivery_method = :letter_opener
+  
 end
