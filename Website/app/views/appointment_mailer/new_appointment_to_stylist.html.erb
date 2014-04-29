@@ -4,16 +4,18 @@
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
   </head>
   <body>
-    <h1>Requested Hair Appointment</h1>
-    <p>
-    </p>
-    <p>Hello <%= @appointment.first_name %>, 
-	</p>
-	<p>We've sent Alicia your off request for 
-		<%= @appointment.service %> 
-		appointment on
-		<%= @appointment.appot.localtime %> </p>
-	<p>She'll contact you shortly to confirm or reschedule.</p>
-    <p>Thanks for requesting an appointment and have a great day!</p>
+    <h1><%= @appointment.first_name %> Requested Hair Appointment</h1>
+    <p>Hello <%= Website::Application.config.stylist_name %>, </p>
+	  <p>You've received an appointment request:</p>
+    <ul>
+      <li><%= @appointment.appot.localtime %></li>
+      <li><%= @appointment.service.service_description %></li> 
+      <li><%= @appointment.first_name %> 
+          <%= @appointment.last_name %></li>
+      <li><%= @appointment.email %></li>
+      <li><%= @appointment.phone %></li>
+      <li><%= @appointment.message %></li>
+    </ul>
+	  <p>Please contact them to confirm or reschedule the appointment.</p>
   </body>
 </html>

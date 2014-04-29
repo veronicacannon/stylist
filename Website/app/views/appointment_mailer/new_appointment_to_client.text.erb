@@ -1,12 +1,7 @@
-Hair Appointment Request
-=======================================
-
 Hello <%= @appointment.first_name %>,
 
-We've sent Alicia your off request for 
-<%= @appointment.service %> 
-appointment on <%= @appointment.appot.localtime %>.
+We've sent off your request for <%= @appointment.service.service_description %> appointment on <%= @appointment.appot.localtime %>
 
-She'll contact you shortly to confirm or reschedule.
+<%= Website::Application.config.stylist_name %> will contact you shortly to confirm or reschedule.
 
-Thanks and have a great day.
+Thanks for requesting an appointment and have a great day!

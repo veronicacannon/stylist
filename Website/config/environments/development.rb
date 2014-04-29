@@ -35,14 +35,15 @@ Website::Application.configure do
   # Expands the lines which load the assets
   config.assets.debug = true
   
-  config.stylist_name = "Stylist"
-  config.from_email_address = "no-reply@example.com"
-  config.stylist_email_address = "stylist@example.com"
+  config.stylist_name = "Alicia"
+  config.from_email_address = "haircut@ltol.com"
+  config.stylist_email_address = "me@veronicacannon.com"
 
   # ActionMailer Configuration
   #config.action_mailer.default_url_options = { host: 'localhost:3000' }
   config.action_mailer.raise_delivery_errors = true
-  config.action_mailer.perform_deliveries = true
+  config.action_mailer.perform_deliveries = 
+  # Change :letter_opener to :smtp>
   config.action_mailer.delivery_method = :letter_opener
   config.action_mailer.smtp_settings = {
   address:              'mail.ltol.com',

@@ -25,18 +25,20 @@ class AppointmentMailer < ActionMailer::Base
     Icalendar::Calendar.new.tap do |cal|
       cal.event do |event|
         event.dtstart = @appointment.appot
-        event.summary = summary
+        event.summary = "Appointment with #{@appointment.first_name}"
+        event.description = description
       end
     end
   end
 
-  def summary
-    String.new.tap do |summary|
-      summary << "Name: #{@appointment.first_name} #{@appointment.last_name} \n"
-      summary << "Date: #{@appointment.appot} \n"
-      summary << "Service: #{@appointment.service} \n"
-      summary << "Email: #{@appointment.email}"
-      summary << "Phone: #{@appointment.phone}"
+  def description
+    String.new.tap do |d|
+      d << "Name: #{@appointment.first_name} #{@appointment.last_name} \n"
+      d << "Date: #{@appointment.appot} \n"
+      d << "Service: #{@appointment.service.service_description} \n"
+      d << "Email: #{@appointment.email} \n"
+      d << "Phone: #{@appointment.phone} \n"
+      d << "Message: #{@appointment.message}"
     end
   end
 end
