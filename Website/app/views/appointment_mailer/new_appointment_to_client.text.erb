@@ -2,6 +2,6 @@ Hello <%= @appointment.first_name %>,
 
 We've sent off your request for <%= @appointment.service.service_description %> appointment on <%= @appointment.appot.localtime %>
 
-<%= Website::Application.config.stylist_name %> will contact you shortly to confirm or reschedule.
+<%= StylistInfo.name %> will contact you shortly to confirm or reschedule.
 
 Thanks for requesting an appointment and have a great day!

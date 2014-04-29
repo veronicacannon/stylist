@@ -5,7 +5,7 @@
   </head>
   <body>
     <h1><%= @appointment.first_name %> Requested Hair Appointment</h1>
-    <p>Hello <%= Website::Application.config.stylist_name %>, </p>
+    <p>Hello <%= StylistInfo.name %>, </p>
 	  <p>You've received an appointment request:</p>
     <ul>
       <li><%= @appointment.appot.localtime %></li>

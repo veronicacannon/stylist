@@ -5,14 +5,14 @@
   </head>
   <body>
     <h1>Requested Hair Appointment with 
-      <%= Website::Application.config.stylist_name %></h1>
+      <%= StylistInfo.name %></h1>
 
     <p>Hello <%= @appointment.first_name %>, </p>
 	  <p>We've sent off your request for 
 		<%= @appointment.service.service_description %> 
 		appointment on
 		<%= @appointment.appot.localtime %> </p>
-	  <p><%= Website::Application.config.stylist_name %> will contact you shortly to confirm or reschedule.</p>
+	  <p><%= StylistInfo.name %> will contact you shortly to confirm or reschedule.</p>
     <p>Thanks for requesting an appointment and have a great day!</p>
   </body>
 </html>
